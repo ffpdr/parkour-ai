@@ -1,13 +1,11 @@
+import pathlib
+import random
+from collections import deque
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from gymnasium.spaces import Box
-from collections import deque
-from numpy import float64
-import numpy as np
-import random
-import pathlib
 
 class JumperBot(nn.Module):
     input_size = 262

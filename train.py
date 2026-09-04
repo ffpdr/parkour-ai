@@ -1,13 +1,10 @@
 import torch
+from gymnasium.wrappers import FlattenObservation
 
 from core.environment import Parkour
 from core.model import JumperBot, train
 
-from gymnasium.wrappers import FlattenObservation
-
-from pathlib import Path
-
-env = FlattenObservation(Parkour(render_mode=None))
+env = FlattenObservation(Parkour(render_mode="human"))
 while True:
     model = JumperBot()
 
